@@ -13,8 +13,7 @@ Dr. Davies
 using namespace std;
 
 int main(int argc, char* argv[]){
-string cript;
-int length;
+char input;
 	if(argc!=2){
 		cout << "Usage: codebreaker [codebreakerTemplateFile]." << endl;
 		return 1;
@@ -25,15 +24,6 @@ int length;
 		cout << "Could NOT open ciphertext " << argv[1] << "!" << endl;
 		return 2;
 	}// end if
-	getline(file,cript);
-	length=cript.length();
-	for(int count=0;count < length; count++){
-		if (isalpha(cript[count])){
-		
-		}
-	cout << "file checks out" << endl;
-	}
-	cout << cript << endl;
-
+	getline(file, input);
 return 0;
 }// end main
