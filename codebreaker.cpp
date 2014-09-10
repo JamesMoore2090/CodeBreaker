@@ -13,7 +13,10 @@ Dr. Davies
 using namespace std;
 
 int main(int argc, char* argv[]){
-char input;
+string input;
+string fileChange;
+int length;
+int count = 0;
 	if(argc!=2){
 		cout << "Usage: codebreaker [codebreakerTemplateFile]." << endl;
 		return 1;
@@ -25,5 +28,18 @@ char input;
 		return 2;
 	}// end if
 	getline(file, input);
+	cout << input << endl;
+	length=input.length();
+	for(count= 0; count < length; count++){
+		for(int i=0; i < 1; i++){
+			if(input[count] == 'Z'){
+				input[count] = ' ';
+			}
+			else 
+				input[count]++;
+			
+		}
+	}
+	cout << "this is the new code " << input << endl;
 return 0;
 }// end main
